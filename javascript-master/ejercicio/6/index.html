@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es" translate="no">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicios</title>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <script>const PageNumber=6;</script>
+  <script src="../../js/common.js" defer></script>
+  <script src="./persona.model.js" defer></script>
+  <script src="./trabajador.model.js" defer></script>
+  <script src="../../js/trabajadoresApiCall.js" defer></script>
+  <script src="./solucion.js" defer></script>
+</head>
+
+<body>
+  <div class="title">
+    <h1 id="ejercicioTitle"></h1>
+    <h1 class="inline">Tranformar JSON a objetos.</h1>
+  </div>
+  <div>
+    <p>Dentro del directorio './ejercicio/6/' encontrarás varios archivos, un 'index.html',  'persona.model.js', 'trabajador.model.js' y un 'solucion.js'.</p>
+    <p>En este ejercicio vas a convertir un JSON en objetos de tipo Trabajador.</p>
+    <ul>
+      <li>trabajadoresApiCall.js: en el index.html se importa este archivo que contiene una función "getTrabajadores()" que te devolverá un listado de trabajadores en formato String. No debes modificarlo.</li>
+      <li>persona.model.js: contiene una clase Persona, dentro de la misma puedes copiar el código que generaste en el ejercicio anterior.</li>
+      <li>trabajador.model.js: contiene una clase Trabajador, dentro de la misma puedes copiar el código que generaste en el ejercicio anterior.</li>
+    </ul>
+  </div>
+  
+  <h2>Apartado 1:</h2>
+  <div>
+    <p>Deberás completar los siguientes puntos:</p>
+    <ul>
+      <li>persona.model.js: contendrá la clase Persona, dentro de la misma puedes copiar el código que generaste en el ejercicio anterior.</li>
+      <li>trabajador.model.js: contendrá una clase Trabajador, dentro de la misma puedes copiar el código que generaste en el ejercicio anterior.</li>
+    </ul>
+  </div>
+  
+  <h2>Apartado 2:</h2>
+  <div>
+    <p>Dentro del archivo solucion.js:
+    <ul>
+      <li>Crearás una función main que invocarás y que se encargará de llamar a la función "getTrabajadores()" para obtener los trabajadores. (En el index.html se están cargando todos los archivos por orden por lo que no hace falta que realices ninguna importación del archivo o la función)</li>
+      <li>Convertirás el listado en un array de Objetos de tipo Trabajador.</li>
+      <li>Una vez tengas el array de Trabajadores, sacarás un ficha de cada trabajador como la que se indica más abajo dentro del div id="solucion2".</li>
+    </ul>
+    <div class="card">
+      <ul>
+        <li>Nombre: Mercedes Lópex Ramirez  -  Dni: 54824443S</li>
+        <li>Edad: XX - Profesión: Doctora (doctora interina)</li>
+        <li>Salario mensual bruto: XX €/mes</li>
+        <li>Años antigüedad: XX años</li>
+      </ul>
+    </div>
+  </div>
+  <div class="solucion" id="solucion2">
+  </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es" translate="no">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicios</title>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <script>const PageNumber=10;</script>
+  <script src="../../js/common.js" defer></script>
+  <script src="../../js/bankApiCall.js" defer></script>
+  <script src="./solucion.js" defer></script>
+</head>
+
+<body>
+  <div class="title">
+    <h1 id="ejercicioTitle"></h1>
+    <h1 class="inline">Funciones asícronas y promesas (async/await)	</h1>
+  </div>
+  <div>
+    <p>Dentro del directorio './ejercicio/10/' encontrarás varios archivos, un 'index.html' y un 'solucion.js'.</p>
+    <p>Además, encontrarás un archivo "bankApiCall.js" dentro de la carpeta '/js', que contiene una serie de funciones asíncronas (funciones que devuelven promesas que se resuelven pasados x segundos) y la lógica necesaria para representar una funcionalidad semejante al backEnd de una aplicación.</p>
+    <p>En caso de dudas puedes consultar la <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/async_function">documentación sobre funciones asíncronas y promesas </a>.</p>
+  </div>
+
+  <h2>Apartado 1:</h2>
+  <div>
+    <p>En el apartado solución verás dos formularios y varias secciones:</p>
+    <ul>
+      <li><b>Formulario acceso:</b></li>
+      <ul>
+        <li><b>Input y botón de login:</b> Dentro del input puedes escribir el nombre de usuario y pulsando el botón de login si tenemos almacenado el usuario en el localStorage se cargará su información, en caso contrario, se creará un usuario con datos aleatorios (esta parte está implementada y puede servirte de ejemplo para el resto de apartados).
+           En cualquiera de los casos esta función devuelve un token que guardamos en una variable y que nos sirve para invocar el resto de funciones del archivo "bankApiCall.js".</li>
+        <li><b>Botón logout:</b> elimina el token almacenado y debería eliminar el contenido que se visualiza en las secciones asociadas al usuario logado.</li>
+        <li><b>Botón borrar datos clientes:</b> vacía el localStorage, por lo que se perederá toda la información de cualquier usuario que tuvieramos almacenado.</li>
+      </ul>
+      <li><b>Formulario de operación bancaria:</b></li>
+      <ul>
+        <li><b>Input: </b>espera un valor númerico.</li>
+        <li><b>Botón ingresar: </b>debe recuperar el valor introducido en el input e invocar la función correspodiente del apiCall. A su vez debe recargar la información de las secciones de cuenta corriente y movimientos.</li>
+        <li><b>Botón retirar: </b>debe recuperar el valor introducido en el input e invocar la función correspodiente del apiCall. A su vez debe recargar la información de las secciones de cuenta corriente y movimientos.</li>
+      </ul>
+      <li><b>Sección datos usuario:</b> una vez logado debe invocar la función correspondiente del apiCall y representar la información recuperada dentro de esta sección. </li>
+      <li><b>Sección cuenta corriente:</b> una vez logado debe invocar la función correspondiente del apiCall y representar la información recuperada dentro de esta sección. </li>
+      <li><b>Sección movimientos:</b> una vez logado debe invocar la función correspondiente del apiCall y representar la información recuperada dentro de esta sección. </li>
+    </ul>
+    <p>Tienes libertad a la hora de decidir cómo representar la información del usuario dentro de cada sección.</p>
+    <p>Si lo crees necesario puedes crear nuevas funciones aparte de las que debes completar. </p>
+    <p>En la siguiente imagen puedes ver los datos que se almacenan para un usuario y las respectivas secciones:</p>
+    <img src="./localStorage.PNG"/>
+  </div>
+  <div class="solucion" id="solucion1">
+    <form id="formApartado1Login">
+      <input type="text" name="userName" placeholder="Nombre de usuario" onkeydown="event.key != 'Enter';"/>
+      <button type="button" onclick="login()">Login</button>
+      <button type="button" onclick="logout()">Logout</button>
+      <button type="button" onclick="clearLocalStorage()">Borrar datos clientes</button>
+    </form>
+    <br>
+    <form id="formApartado1Operacion">
+      <input type="number" name="cantidad" placeholder="Cantidad" onkeydown="event.key != 'Enter';"/>
+      <button type="button" onclick="ingresarDinero()">Ingresar</button>
+      <button type="button" onclick="retirarDinero()">Retirar</button>
+    </form>
+    <p><b>Datos Usuario: </b></p>
+    <div class="section" id="datosUsuario">
+    </div>
+    <p><b>Cuenta corriente: </b></p>
+    <div class="section" id="cuentaCorrienteUsuario">
+    </div>
+    <p><b>Movimientos: </b></p>
+    <div class="section" id="movimientosUsuario">
+    </div>
+  </div>
+</body>
+</html>

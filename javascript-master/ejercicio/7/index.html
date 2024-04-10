@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es" translate="no">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicios</title>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <script>const PageNumber = 7;</script>
+  <script src="../../js/common.js" defer></script>
+  <script src="./persona.model.js" defer></script>
+  <script src="./trabajador.model.js" defer></script>
+  <script src="../../js/trabajadoresApiCall.js" defer></script>
+  <script src="./solucion.js" defer></script>
+</head>
+
+<body>
+  <div class="title">
+    <h1 id="ejercicioTitle"></h1>
+    <h1 class="inline">Trabajar con array de objetos.</h1>
+  </div>
+  <div>
+    <p>Dentro del directorio './ejercicio/7/' encontrarás varios archivos, un 'index.html', 
+      'persona.model.js', 'trabajador.model.js' y un 'solucion.js'.</p>
+    <p>En este ejercicio vas a trabajar con un array de objetos.</p>
+    <ul>
+      <li>trabajadoresApiCall.js: en el index.html se importa  este archivo que contiene una función que te devolverá un listado de trabajadores en
+        formato String. No debes modificarlo.</li>
+      <li>persona.model.js: contiene una clase Persona, dentro de la misma puedes copiar el código que generaste en el
+        ejercicio anterior.</li>
+      <li>trabajador.model.js: contiene una clase Trabajador, dentro de la misma puedes copiar el código que generaste
+        en el ejercicio anterior.</li>
+    </ul>
+  </div>
+
+  <h2>Apartado 1:</h2>
+  <div>
+    <p>Deberás completar los siguientes puntos:</p>
+    <ul>
+      <li>persona.model.js: contendrá la clase Persona, dentro de la misma puedes copiar el código que generaste en el
+        ejercicio anterior.</li>
+      <li>trabajador.model.js: contendrá una clase Trabajador, dentro de la misma puedes copiar el código que generaste
+        en el ejercicio anterior.</li>
+      <li>solucion.js: replica la función main del ejercicio anterior (invoca la función getTrabajadores pasándole como parámetro un número por ejemplo 150, para que te devuelva 150 trabajadores), deberás mostrar el listado completo dentro de div id="solucion1".
+      </li>
+    </ul>
+    <div class="solucion" id="solucion1"></div>
+  </div>
+
+  <h2>Apartado 2:</h2>
+  <div>
+    <p>Deberás modificar los archivos necesarios para que realicen las siguiente acciones (la solución se mostrará dentro del div id="solucion2")</p>
+    <p>Tienes total libertad a la hora de representar los datos por pantalla, intenta representarlos de forma clara y ordenada, no te preocupes por los estilos aunque tienes libertad para añadir algunos si lo consideras necesario.</p>
+    <ul>
+      <li>Deberás calcular cuántas personas hay en cada uno de los rangos de edades [<20][20 - 29][30 - 39][40 - 49][>=50] </li>
+      <li>Deberás calcular la media de sueldos brutos anuales que hay en cada uno de los rangos de edad del apartado anterior.</li>
+      <li>Deberás calcular la media de años de antigüedad que hay en cada uno de los rangos de edad del apartado anterior.</li>
+    </ul>
+    <div class="solucion" id="solucion2">
+    </div>
+  </div>
+
+  <h2>Apartado 3:</h2>
+  <div>
+    <p>Deberás modificar los archivos necesarios para que realicen las siguiente acciones (la solución se mostrará dentro del div id="solucion3")</p>
+    <p>Tienes total libertad a la hora de representar los datos por pantalla, intenta representarlos de forma clara y ordenada, no te preocupes por los estilos aunque tienes libertad para añadir algunos si lo consideras necesario.</p>
+    <ul>
+      <li>Deberás agrupar a los trabajadores por profesión y mostrar por pantalla todas las profesiones y el número de personas que hay para cada profesión.</li>
+      <li>Deberás mostrar el listado ordenado acorde al salario anual bruto de mayor a menor</li>
+      <li>Además mostrarás el sueldo bruto mensual medio prorrateado en 12 pagas por cada profesión.</li>
+      <li>Deberás calcular y mostrar la media de edad que hay para cada profesión.</li>
+      <li>Deberás mostrar el número de personas en cada grupo.</li>
+    </ul>
+    <div class="solucion" id="solucion3">
+    </div>
+  </div>
+
+  <h2>Apartado 4:</h2>
+  <div>
+    <p>Deberás modificar los archivos necesarios para que realicen las siguiente acciones (la solución se mostrará dentro del div id="solucion4")</p>
+    <p>Tienes total libertad a la hora de representar los datos por pantalla, intenta representarlos de forma clara y ordenada, no te preocupes por los estilos aunque tienes libertad para añadir algunos si lo consideras necesario.</p>
+    <ul>
+      <li>Deberás crear un input de texto y un botón que al clickarlo realice una búsqueda dentro de array de trabajadores cuyo nombre completo contenga las letras o palabras escritas en el input.</li>
+      <li>Añade otro input en este caso numérico y que al hacer click en el botón anterior muestre las personas cuya antigüedad sea mayor o igual al número insertado.</li>
+      <li>Los trabajadores resultantes de la búsqueda deberán mostrarse en la solución.</li>
+    </ul>
+    <div class="solucion" id="solucion4">
+    </div>
+  </div>
+</body>
+
+</html>

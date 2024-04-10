@@ -1,0 +1,98 @@
+body{
+    font-family: Verdana;
+}
+.w-100{
+    width: 100%;
+}
+.center{
+    text-align: center;
+}
+.tab-left{
+    margin-left: 25px;
+}
+table, th, td {
+   border:1px solid black;
+}
+.hidden{
+    display: none;
+}
+
+/* Navegacion */
+.nav{
+    margin-bottom: 0;
+    padding-left: 0;
+    min-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.nav > .logo{    
+    margin-top: -26px;
+    margin-bottom: -28px;
+    width: 190px;
+}
+.nav > .empty-div{
+    min-width: 130px;
+}
+.nav > a.prev span{
+    padding-right: 5px;
+}
+.nav > a.next span{
+    padding-left: 5px;
+}
+
+
+/* Botones */
+.common-button{
+    margin: 10px 5px;
+    padding: 5px 10px;
+    color: #FFFFFF;
+    background-color: #4CAF50;
+    text-decoration: none !important;
+    border-radius: 5px;
+}
+
+/*Title*/
+.title{
+    width: 100%;
+    margin-top: 20px;
+}
+.title h1{
+    display: inline-block;
+}
+
+/*card*/
+.card{
+    border: 1px solid #333;
+    border-radius: 15px;
+    width: fit-content;
+    padding-right: 20px;
+    margin: 10px;
+}
+
+/* Solución */
+.solucion{
+    border: 1px dashed #333;
+    min-height: 40px;
+    width: calc(100%-20px);
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.solucion::before{
+    content: 'Solución:';
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Section */
+.section{
+    border: 1px dashed #333;
+    min-height: 40px;
+    width: calc(100%-20px);
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 10px;
+}

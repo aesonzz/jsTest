@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es" translate="no">
+<head>
+  <meta charset="utf-8">
+  <title>Ejercicios</title>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <script>const PageNumber=9;</script>
+  <script src="../../js/common.js" defer></script>
+  <script src="./persona.model.js" defer></script>
+  <script src="./trabajador.model.js" defer></script>
+  <script src="../../js/trabajadoresApiCall.js" defer></script>
+  <script src="../../js/familiaApiCall.js" defer></script>
+  <script src="./solucion.js" defer></script>
+</head>
+
+<body>
+  <div class="title">
+    <h1 id="ejercicioTitle"></h1>
+    <h1 class="inline">Trabajar con un árbol de datos.</h1>
+  </div>
+  <div>
+    <p>Dentro del directorio './ejercicio/9/' encontrarás varios archivos, un 'index.html', 
+      'persona.model.js', 'trabajador.model.js' y un 'solucion.js'.</p>
+    <p>Copia la clase Persona y Trabajador que tienes implementadas en el ejercicio anterior en los archivos correspondientes a este ejercicio.</p>
+    <ul>
+      <li>familiaApiCall.js: en el index.html se importa este archivo que contiene una función que te devolverá un Json con los datos de un árbol genealógico.</li>
+    </ul>
+  </div>
+
+  <h2>Apartado 1:</h2>
+  <div>
+    <p>
+      La función "getFamiliaEjemplo()" que está dentro de familiaApiCall.js, te devolverá un Json con los datos estructurados de una familia. Ten en cuenta que El Json no devuelve objetos, sino los atributos que representan a la clase Trabajador.
+    </p>
+    <p>El objetivo de este apartado es que transformes el JSON plano en objectos de tipo Trabajador. Tienes libertad para implementar la solución acorde a tu nivel y conocimientos, aun así te damos dos sugerencias:</p>
+    <p>La primera opción (más compleja):</p>
+    <ul>
+      <li>Deberás modificar el constructor de la clase Trabajador y Persona para que tenga en cuenta si no lo hace ya que cuando crees un objeto de tipo Trabajador, si el campo descendientes tiene contenido, debe a su vez crear los objeto Trabajadores o personas correspondiente.</li>
+      <li>Una vez tengas listas las clases, podrás crear un Objeto de tipo Trabajador con los datos que obtienes al invocar la función "getFamiliaEjemplo()". Esta solución evitará que tengas que recorrer el árbol en el archivo solucion.js, simplemente creará un nuevo Trabajador y esta clase se encargará de crear tantos trabajadores como descendientes tenga.</li>
+    </ul>
+    <p>La segunda opción: recorre el árbol devuelto por la función y por cada elemento y sus descendientes crea un Objeto de tipo Trabajador.</p>
+    <p>Una vez implementada tu soluicón, deberás mostrar por consola el trabajador que has creado, tal y como aparece en la imagen.</p>
+    <img src="./arbolFamiliaEjemplo.PNG"/>
+  </div>
+
+  <h2>Apartado 2:</h2>
+  <div>
+    <p>Una vez implementado el apartado 1, deberás crear una serie de funciones* con la que obtener la siguiente información y muéstrala en el recuadro de la solución: </p>
+    <ul>
+      <li>¿Cuántos "Marcial Cañas" ha habido en la familia?</li>
+      <li>¿Cuántos familiares se han apellidado "Cañas Cañas"?</li>
+      <li>Muestra los familiares que tuvieron como profesión "Ecólogo", mostrando nombre completo, fecha nacimiento y el salario mensual bruto. </li>
+      <li>¿Cuántas personas de la familia tendrían ahora 80 años o menos?</li>
+      <li>¿Cuántas personas de la familia tendrían ahora 25 años o menos?</li>
+      <li>¿Cuántas generaciones tiene la rama más larga del árbol genealógico? (la primera generación son la descendencia del primero nodo). Para hacer pruebas en este apartado puedes invocar la función "getFamiliaEjemplo6Generaciones()" del archivo "familiaApiCall.js", el cual te devuelve un árbol geneálogico cuya rama más larga tiene 6 generaciones. </li>
+    </ul>
+    <p>* Es importante que refactorices el código para hacer funciones limpias y claras, intentando evitar repetir código.</p>
+    <div class="solucion" id="solucion2"></div>
+  </div>
+</body>
+</html>
