@@ -1,69 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" translate="no">
-<head>
-  <meta charset="utf-8">
-  <title>Ejercicios</title>
-  <link rel="stylesheet" href="../../styles/style.css">
-  <script>const PageNumber=4;</script>
-  <script src="../../js/common.js" defer></script>
-  <script src="./solucion.js" defer></script>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicios</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <script>
+      const PageNumber = 4;
+    </script>
+    <script src="../../js/common.js" defer></script>
+    <script src="./solucion.js" defer></script>
+  </head>
 
-<body>
-  <div class="title">
-    <h1 id="ejercicioTitle"></h1>
-    <h1 class="inline">Clases y objetos.</h1>
-  </div>
-  <div>
-    <p>Dentro del directorio './ejercicio/4/' encontrarás dos archivos, un 'index.html' y un 'solucion.js'.</p>
-    <p>En este ejercicio queremos evaluar tus conocimientos sobre clases y objetos. Si tienes dudas puedes consultar la documentación en <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes">Developer Mozilla</a></p>
-  </div>
+  <body>
+    <div class="title">
+      <h1 id="ejercicioTitle"></h1>
+      <h1 class="inline">Clases y objetos.</h1>
+    </div>
+    <div>
+      <p>
+        Dentro del directorio './ejercicio/4/' encontrarás dos archivos, un
+        'index.html' y un 'solucion.js'.
+      </p>
+      <p>
+        En este ejercicio queremos evaluar tus conocimientos sobre clases y
+        objetos. Si tienes dudas puedes consultar la documentación en
+        <a
+          target="_blank"
+          href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Classes"
+          >Developer Mozilla</a
+        >
+      </p>
+    </div>
 
-  <h2>Apartado 1:</h2>
-  <div>
-    <p>Dentro del archivo "solucion.js" debes implementar una clase Persona con los siguientes atributos y métodos:</p>
-    <p>- Atributos:</p>
-    <ul>
-      <li>nombre</li>
-      <li>apellido1</li>
-      <li>apellido2 (opcional)</li>
-      <li>sexo</li>
-      <li>dni</li>
-      <li>fechaNacimiento: formato dd/mm/yyyy</li>
-      <li>profesion</li>
-      <li>dniProgenitor1</li>
-      <li>dniProgenitor2 (opcional)</li>
-    </ul>
-    <p>- Métodos:</p>
-    <ul>
-      <li>get nombreCompleto(): deberá concatenar nombre + apellido1 + apellido2 </li>
-      <li>get edad(): deberá devolver la edad de la persona </li>
-    </ul>
-    <p>En este apartado no hará falta que muestres nada por pantalla.</p>
-  </div>
+    <h2>Apartado 1:</h2>
+    <div>
+      <p>
+        Dentro del archivo "solucion.js" debes implementar una clase Persona con
+        los siguientes atributos y métodos:
+      </p>
+      <p>- Atributos:</p>
+      <ul>
+        <li>nombre</li>
+        <li>apellido1</li>
+        <li>apellido2 (opcional)</li>
+        <li>sexo</li>
+        <li>dni</li>
+        <li>fechaNacimiento: formato dd/mm/yyyy</li>
+        <li>profesion</li>
+        <li>dniProgenitor1</li>
+        <li>dniProgenitor2 (opcional)</li>
+      </ul>
+      <p>- Métodos:</p>
+      <ul>
+        <li>
+          get nombreCompleto(): deberá concatenar nombre + apellido1 + apellido2
+        </li>
+        <li>get edad(): deberá devolver la edad de la persona</li>
+      </ul>
+      <p>En este apartado no hará falta que muestres nada por pantalla.</p>
+    </div>
 
-  <h2>Apartado 2:</h2>
-  <div>
-    <p>Una vez realizado el apartado 1 deberás crear un objeto Persona con los siguientes atributos:</p>
-    <p>- Atributos:</p>
-    <ul>
-      <li>nombre: Mercedes</li>
-      <li>apellido1: López</li>
-      <li>apellido2: Ramirez</li>
-      <li>sexo: F</li>
-      <li>dni: 54824443S</li>
-      <li>fechaNacimiento: 30/12/1978</li>
-      <li>profesion: Doctora</li>
-      <li>dniProgenitor1: 44587993R</li>
-      <li>dniProgenitor2: null</li>
-    </ul>
-    <p>Una vez creado deberás mostrar dentro del div id="solucion2" la siguiente información:</p>
-    <ul>
-      <li>Nombre: Mercedes Lópex Ramirez  -  Dni: 54824443S</li>
-      <li>Edad: XX - Profesión: Profesora</li>
-    </ul>
-  </div>
-  <div id="solucion2" class="solucion">
-  </div>
-</body>
+    <h2>Apartado 2:</h2>
+    <div>
+      <p>
+        Una vez realizado el apartado 1 deberás crear un objeto Persona con los
+        siguientes atributos:
+      </p>
+      <p>- Atributos:</p>
+      <ul>
+        <li>nombre: Mercedes</li>
+        <li>apellido1: López</li>
+        <li>apellido2: Ramirez</li>
+        <li>sexo: F</li>
+        <li>dni: 54824443S</li>
+        <li>fechaNacimiento: 30/12/1978</li>
+        <li>profesion: Doctora</li>
+        <li>dniProgenitor1: 44587993R</li>
+        <li>dniProgenitor2: null</li>
+      </ul>
+      <p>
+        Una vez creado deberás mostrar dentro del div id="solucion2" la
+        siguiente información:
+      </p>
+      <ul>
+        <li>Nombre: Mercedes Lópex Ramirez - Dni: 54824443S</li>
+        <li>Edad: XX - Profesión: Profesora</li>
+      </ul>
+    </div>
+    <div id="solucion2" class="solucion"></div>
+  </body>
 </html>
