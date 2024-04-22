@@ -1,48 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" translate="no">
-<head>
-  <meta charset="utf-8">
-  <title>Ejercicios</title>
-  <link rel="stylesheet" href="../../styles/style.css">
-  <script>const PageNumber=3;</script>
-  <script src="../../js/common.js" defer></script>
-  <script src="./solucion.js" defer></script>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicios</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <script>
+      const PageNumber = 3;
+    </script>
+    <script src="../../js/common.js" defer></script>
+    <script src="./solucion.js" defer></script>
+  </head>
 
-<body>
-  <div class="title">
-    <h1 id="ejercicioTitle"></h1>
-    <h1 class="inline">Manejo de JSON's.</h1>
-  </div>
-  <div>
-    <p>Dentro del directorio './ejercicio/3/' encontrarás dos archivos, un 'index.html' y un 'solucion.js'.</p>
-    <p>En este ejercicio queremos saber si dominas la estructura de un JSON y si conoces las fuciones JSON.parse y JSON.stringify. Si tienes dudas puedes consultar la documentación en <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/JSON">Developer Mozilla</a></p>
-  </div>
+  <body>
+    <div class="title">
+      <h1 id="ejercicioTitle"></h1>
+      <h1 class="inline">Manejo de JSON's.</h1>
+    </div>
+    <div>
+      <p>
+        Dentro del directorio './ejercicio/3/' encontrarás dos archivos, un
+        'index.html' y un 'solucion.js'.
+      </p>
+      <p>
+        En este ejercicio queremos saber si dominas la estructura de un JSON y
+        si conoces las fuciones JSON.parse y JSON.stringify. Si tienes dudas
+        puedes consultar la documentación en
+        <a
+          target="_blank"
+          href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/JSON"
+          >Developer Mozilla</a
+        >
+      </p>
+    </div>
 
-  <h2>Apartado 1:</h2>
-  <div>
-    <p>Intenta escribir un json que represente la siguiente estructura y sacalo por pantalla dentro del div id="solucion1" (completa la función "crearObjetoPersonasYPintarStringPorPantalla"):</p>
-    <p> - personas = Array de personas </p>
-    <p class="tab-left">- nombre: Paco, edad: 44</p>
-    <p class="tab-left">- nombre: María, edad: 20</p>
-    <p class="tab-left">- nombre: Luis, edad: 17</p>
-    <p class="tab-left">- nombre: Irene, edad: 55</p>
-  </div>
-  <!-- SOLUCIÓN -->
-  <div id="solucion1" class="solucion">
-  </div>
+    <h2>Apartado 1:</h2>
+    <div>
+      <p>
+        Intenta escribir un json que represente la siguiente estructura y sacalo
+        por pantalla dentro del div id="solucion1" (completa la función
+        "crearObjetoPersonasYPintarStringPorPantalla"):
+      </p>
+      <p>- personas = Array de personas</p>
+      <p class="tab-left">- nombre: Paco, edad: 44</p>
+      <p class="tab-left">- nombre: María, edad: 20</p>
+      <p class="tab-left">- nombre: Luis, edad: 17</p>
+      <p class="tab-left">- nombre: Irene, edad: 55</p>
+    </div>
+    <!-- SOLUCIÓN -->
+    <div id="solucion1" class="solucion"></div>
 
-  <h2>Apartado 2:</h2>
-  <div>
-    <p>En el archivo solucion.js está declarada una variable "colores" en formato string.</p>
-    <p>Deberás completar la función "mostrarColores" y realizar los siguientes puntos: </p>
-    <ul>
-      <li>crear un json a partir de dicho string</li>
-      <li>por cada color crearás de forma dinámica un div '< div style="background-color: codigoColor;"> nombreColor < /div>' con el color en cuestión. Los cuadrados deberán estar dentro del div con id="solucion2"</li>
-    </ul>
-  </div>
-  <!-- SOLUCIÓN -->
-  <div id="solucion2" class="solucion">
-  </div>
-</body>
+    <h2>Apartado 2:</h2>
+    <div>
+      <p>
+        En el archivo solucion.js está declarada una variable "colores" en
+        formato string.
+      </p>
+      <p>
+        Deberás completar la función "mostrarColores" y realizar los siguientes
+        puntos:
+      </p>
+      <ul>
+        <li>crear un json a partir de dicho string</li>
+        <li>
+          por cada color crearás de forma dinámica un div '< div
+          style="background-color: codigoColor;"> nombreColor < /div>' con el
+          color en cuestión. Los cuadrados deberán estar dentro del div con
+          id="solucion2"
+        </li>
+      </ul>
+    </div>
+    <!-- SOLUCIÓN -->
+    <div id="solucion2" class="solucion"></div>
+  </body>
 </html>

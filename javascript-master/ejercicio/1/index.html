@@ -1,50 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es" translate="no">
-<head>
-  <meta charset="utf-8">
-  <title>Ejercicios</title>
-  <link rel="stylesheet" href="../../styles/style.css">
-  <script>const PageNumber=1;</script>
-  <script src="../../js/common.js" defer></script>
-  <script src="./solucion.js" defer></script>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ejercicios</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <script>
+      const PageNumber = 1;
+    </script>
+    <script src="../../js/common.js" defer></script>
+    <script src="./solucion.js" defer></script>
+  </head>
 
-<body>
+  <body>
     <div class="title">
       <h1 id="ejercicioTitle"></h1>
       <h1 class="inline">Manejo de arrays.</h1>
     </div>
-    <p>Dentro del directorio './ejercicio/1/' encontrarás dos archivos, un 'index.html' y un 'solucion.js'.</p>
-    <p><b>¿Has usado alguna vez el debugger de chrome? ¿Sabes abrirlo? ¿Sabes sacar por consola variables y resultados?</b> Si la respuesta es no, mira primero este enlace y tenlo a mano <a target="_blank" href="https://es.javascript.info/debugging-chrome">debugging-chrome</a></p>
-    <h2>Apartado 1: </h2>
+    <p>
+      Dentro del directorio './ejercicio/1/' encontrarás dos archivos, un
+      'index.html' y un 'solucion.js'.
+    </p>
+    <p>
+      <b
+        >¿Has usado alguna vez el debugger de chrome? ¿Sabes abrirlo? ¿Sabes
+        sacar por consola variables y resultados?</b
+      >
+      Si la respuesta es no, mira primero este enlace y tenlo a mano
+      <a target="_blank" href="https://es.javascript.info/debugging-chrome"
+        >debugging-chrome</a
+      >
+    </p>
+    <h2>Apartado 1:</h2>
     <div>
-      <p>Disponemos de un input numérico y un botón que invoca una función que recupera el valor del input del formulario y lo añade a la variable aNumbers.</p>
+      <p>
+        Disponemos de un input numérico y un botón que invoca una función que
+        recupera el valor del input del formulario y lo añade a la variable
+        aNumbers.
+      </p>
       <p>Puntos a implementar:</p>
       <ul>
-        <li>Crear una función que se encargue de mostrar debajo del input el listado de números insertados en el orden en el que se insertaron. *</li>
-        <li>Crear otra función que muestre (debajo del listado mencionado en el punto anterior) los números pares que hay en el array de menor a mayor. *</li>
+        <li>
+          Crear una función que se encargue de mostrar debajo del input el
+          listado de números insertados en el orden en el que se insertaron. *
+        </li>
+        <li>
+          Crear otra función que muestre (debajo del listado mencionado en el
+          punto anterior) los números pares que hay en el array de menor a
+          mayor. *
+        </li>
       </ul>
-      <p>* Ambos listados deberán actualizarse automáticamente cada vez que insertemos un nuevo número.</p>
+      <p>
+        * Ambos listados deberán actualizarse automáticamente cada vez que
+        insertemos un nuevo número.
+      </p>
     </div>
     <!-- SOLUCIÓN -->
     <div id="solucion1" class="solucion">
       <form id="formApartado1">
-        <input type="number" name="numberInput" onkeydown=" event.key != 'Enter';"/>
+        <input
+          type="number"
+          name="numberInput"
+          onkeydown=" event.key != 'Enter';"
+        />
         <button type="button" onclick="addNumber()">Añadir</button>
       </form>
+      <!-- div's para mostrar el listado de números y los números pares en orden-->
+      <div id="insertedNumbers"></div>
+      <div id="evenNumbers"></div>
     </div>
-    <br/>
-    <h2>Apartado 2: </h2>
+    <br />
+    <h2>Apartado 2:</h2>
     <div>
       <p>Reutilzando el array de números aNumber del apartado anterior.</p>
       <p>Puntos a implementar:</p>
       <ul>
-        <li>Crear un botón dentro del div id="solucion2" que al presionarlo convierta todos los números impares en pares (sumándole 1).*</li>
+        <li>
+          Crear un botón dentro del div id="solucion2" que al presionarlo
+          convierta todos los números impares en pares (sumándole 1).*
+        </li>
       </ul>
-      <p>* Los listados del apartado anterior deberán actualizarse automáticamente al presionar este botón.</p>
+      <p>
+        * Los listados del apartado anterior deberán actualizarse
+        automáticamente al presionar este botón.
+      </p>
     </div>
     <!-- SOLUCIÓN -->
-    <div id="solucion2" class="solucion">
-    </div>
-</body>
+    <div id="solucion2" class="solucion"></div>
+  </body>
 </html>
