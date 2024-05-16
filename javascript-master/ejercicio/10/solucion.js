@@ -38,7 +38,7 @@ async function getInfoUsuario(){
         const userData = await bankApiCall.getDatosUsuario(token);
         document.getElementById("datosUsuario").innerHTML = `
             <p>Nombre: ${userData.nombre}</p>
-            <p>Profesión: ${userData.profesion}</p>
+            <p>Profesion: ${userData.profesion}</p>
             <p>Edad: ${userData.edad}</p>
             <p>DNI: ${userData.dni}</p>
         `;
@@ -51,7 +51,7 @@ async function getCuentaUsuario(){
     try {
         const cuentaData = await bankApiCall.getCuentaCorrienteUsuario(token);
         document.getElementById("cuentaCorrienteUsuario").innerHTML = `
-            <p>Número de cuenta: ${cuentaData.nCuenta}</p>
+            <p>Numero de cuenta: ${cuentaData.nCuenta}</p>
             <p>Saldo: ${cuentaData.saldo}</p>
         `;
     } catch (error) {
@@ -64,7 +64,7 @@ async function getMovimientosUsuario(){
         const movimientosData = await bankApiCall.getUltimosMovimientos(token);
         const movimientosList = movimientosData.map(movimiento => `
             <p>Fecha: ${movimiento.fecha}</p>
-            <p>Operación: ${movimiento.operacion}</p>
+            <p>Operacion: ${movimiento.operacion}</p>
             <p>Cantidad: ${movimiento.cantidad}</p>
             <p>Saldo en cuenta: ${movimiento.saldoEnCuenta}</p>
             <hr>
