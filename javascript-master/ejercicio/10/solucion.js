@@ -1,9 +1,5 @@
 let token = null;
-let bankApiCall = null;
-
-function main(){
-    bankApiCall = new BankApiCall();
-}
+let bankApiCall = new BankApiCall();
 
 async function login(){
     try{
@@ -19,40 +15,84 @@ async function login(){
     } 
 }
 
-function clearLocalStorage(){
+async function clearLocalStorage(){
     localStorage.clear();
-    //TODO: vaciar contenido de las diferentes secciones
+    document.getElementById("datosUsuario").innerHTML = "";
+    document.getElementById("cuentaCorrienteUsuario").innerHTML = "";
+    document.getElementById("movimientosUsuario").innerHTML = "";
 }
 
-function logout(){
+async function logout(){
     token = null;
-    //TODO: debes borrar el contenido de las secciones datosUsuario, cuentaCorrienteUsuario y movimientosUsuario.
+    clearLocalStorage();
 }
 
-function showData(){
-    //TOOD invocar funciones para mostrar toda la información necesaria dentro de las diferenetes secciones.
+async function showData(){
+    await getInfoUsuario();
+    await getCuentaUsuario();
+    await getMovimientosUsuario();
 }
 
 async function getInfoUsuario(){
-    //TODO: añadir código necesario 
+    try {
+        const userData = await bankApiCall.getDatosUsuario(token);
+        document.getElementById("datosUsuario").innerHTML = `
+            <p>Nombre: ${userData.nombre}</p>
+            <p>Profesion: ${userData.profesion}</p>
+            <p>Edad: ${userData.edad}</p>
+            <p>DNI: ${userData.dni}</p>
+        `;
+    } catch (error) {
+        alert(error);
+    }
 }
 
 async function getCuentaUsuario(){
-    //TODO: añadir código necesario 
+    try {
+        const cuentaData = await bankApiCall.getCuentaCorrienteUsuario(token);
+        document.getElementById("cuentaCorrienteUsuario").innerHTML = `
+            <p>Numero de cuenta: ${cuentaData.nCuenta}</p>
+            <p>Saldo: ${cuentaData.saldo}</p>
+        `;
+    } catch (error) {
+        alert(error);
+    }
 }
 
 async function getMovimientosUsuario(){
-    //TODO: añadir código necesario
+    try {
+        const movimientosData = await bankApiCall.getUltimosMovimientos(token);
+        const movimientosList = movimientosData.map(movimiento => `
+            <p>Fecha: ${movimiento.fecha}</p>
+            <p>Operacion: ${movimiento.operacion}</p>
+            <p>Cantidad: ${movimiento.cantidad}</p>
+            <p>Saldo en cuenta: ${movimiento.saldoEnCuenta}</p>
+            <hr>
+        `).join("");
+        document.getElementById("movimientosUsuario").innerHTML = movimientosList;
+    } catch (error) {
+        alert(error);
+    }
 }
 
 async function ingresarDinero(){
-    //TODO: añadir código necesario => además de invocar la función correspondiente al apiCall deberás refrescar los datos 
-    //      que se visualizan en la sección Cuenta corriente y Movimientos
+    const cantidad = document.getElementById("formApartado1Operacion").elements["cantidad"].value;
+    try {
+        await bankApiCall.ingresarDinero(token, cantidad);
+        showData();
+    } catch (error) {
+        alert(error);
+    }
 }
 
 async function retirarDinero(){
-    //TODO: añadir código necesario => además de invocar la función correspondiente al apiCall deberás refrescar los datos 
-    //      que se visualizan en la sección Cuenta corriente y Movimientos
+    const cantidad = document.getElementById("formApartado1Operacion").elements["cantidad"].value;
+    try {
+        await bankApiCall.retirarDinero(token, cantidad);
+        showData();
+    } catch (error) {
+        alert(error);
+    }
 }
 
 main();
